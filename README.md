@@ -1,4 +1,4 @@
-# PyLogger
+# Logger
 Custom Python Logging Tool for simple debugging (outside of print statements).
 
 ## How to Use

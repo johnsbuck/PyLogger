@@ -1,11 +1,14 @@
 import json
 from datetime import datetime
 
-from Logger.SeverityType import SeverityType
+from logger.SeverityType import SeverityType
 
 
 class Log(object):
     def __init__(self, lognum: int, severity=SeverityType.DEBUG, msg=""):
+        if lognum < 0:
+            raise ValueError("ERROR: Log number must be an unsigned integer (>= 0).")
+
         self.lognum = lognum
         self.time = datetime.now().strftime("%Y-%b-%d %H:%M:%S.%f")
         self.time = self.time[:-3]
@@ -22,3 +25,9 @@ class Log(object):
 
     def __repr__(self):
         return self.__str__()
+
+    def __eq__(self, other):
+        return self.__dict__ == other.__dict__
+
+    def __ne__(self, other):
+        return not self == other

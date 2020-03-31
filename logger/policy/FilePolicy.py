@@ -1,5 +1,5 @@
-from Logger.Policy.ILogPolicy import ILogPolicy
-from Logger.Log import Log
+from logger.policy.ILogPolicy import ILogPolicy
+from logger.Log import Log
 
 
 class FilePolicy(ILogPolicy):

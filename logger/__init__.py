@@ -2,7 +2,7 @@ from .Log import Log
 from .Logger import Logger
 from .SeverityType import SeverityType
 
-import Logger.Policy
+import logger.policy
 
 
 __all__ = ["Log", "Logger", "SeverityType"]
